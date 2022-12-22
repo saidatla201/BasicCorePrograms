@@ -10,17 +10,17 @@ namespace logicprograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter the number:");
-            int n= Convert.ToInt32(Console.ReadLine());
-            if(n%2==0)
-            {
-                Console.WriteLine("The number is Even");
+            Console.WriteLine("Please enter the numbers:");
+            int firstnumber= Convert.ToInt32(Console.ReadLine());
+            int secondnumber = Convert.ToInt32(Console.ReadLine());
+            int temp = 0;
 
-            }
-            else
-            {
-                Console.WriteLine("The number is Odd");
-            }
+            //condition for swapping
+            Console.WriteLine("Numbers before swapping firstnumber={0} secondnumber={1}",firstnumber,secondnumber );
+            temp = firstnumber;
+            firstnumber = secondnumber;
+            secondnumber = temp ;
+            Console.WriteLine("Numbers after swapping firstnumber={0} secondnumber={1}" ,firstnumber  , secondnumber );
             Console.ReadLine();
         }
     }
