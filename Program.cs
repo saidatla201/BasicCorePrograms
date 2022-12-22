@@ -10,24 +10,15 @@ namespace logicprograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter the Year:");
-            int year = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the dividend value :");
+            int numerator = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the divisor vale:");
+            int denominator = Convert.ToInt32(Console.ReadLine());
 
-            if (year>999 && year <=9999)
-            {
-                if(year%4==0)
-                {
-                    Console.WriteLine("This is leap year");
-                }
-                else
-                {
-                    Console.WriteLine("This is not a leap year");
-                }
-            }
-            else
-            {
-                Console.WriteLine("There is an error in the year num");
-            }
+            int quotient = numerator / denominator;
+            int remainder = numerator % denominator;
+
+            Console.WriteLine("The quotient is {0} and the remainder is {1}", quotient, remainder);
             Console.ReadLine();
         }
     }
