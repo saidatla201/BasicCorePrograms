@@ -10,17 +10,24 @@ namespace logicprograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter the numbers:");
-            int firstnumber= Convert.ToInt32(Console.ReadLine());
-            int secondnumber = Convert.ToInt32(Console.ReadLine());
-            int temp = 0;
+            Console.WriteLine("Please enter the Year:");
+            int year = Convert.ToInt32(Console.ReadLine());
 
-            //condition for swapping
-            Console.WriteLine("Numbers before swapping firstnumber={0} secondnumber={1}",firstnumber,secondnumber );
-            temp = firstnumber;
-            firstnumber = secondnumber;
-            secondnumber = temp ;
-            Console.WriteLine("Numbers after swapping firstnumber={0} secondnumber={1}" ,firstnumber  , secondnumber );
+            if (year>999 && year <=9999)
+            {
+                if(year%4==0)
+                {
+                    Console.WriteLine("This is leap year");
+                }
+                else
+                {
+                    Console.WriteLine("This is not a leap year");
+                }
+            }
+            else
+            {
+                Console.WriteLine("There is an error in the year num");
+            }
             Console.ReadLine();
         }
     }
