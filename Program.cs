@@ -10,37 +10,20 @@ namespace logicprograms
     {
         static void Main(string[] args)
         {
-            
-            int head = 0, tail = 0;
-            Console.WriteLine("Enter how many times should coin flip:");
+            Console.WriteLine("Please enter the number:");
             int n= Convert.ToInt32(Console.ReadLine());
-
-            Random random = new Random();
-            for (int i = 0; i <= n; i++)
+            if(n%2==0)
             {
-                double coin = random.NextDouble();
-                if (coin < 0.5)
-                {
-                    tail++;
-                }
-                else
-                {
-                    head++;
-                }
+                Console.WriteLine("The number is Even");
+
             }
-                if (head > tail)
-                {
-                    Console.WriteLine("Heads wins");
-                }
-                else
-                {
-                    Console.WriteLine("Tails wins");
-                }
-                int headpercent= head * 100 / n;
-                int tailpercent = tail * 100 / n;
-                Console.WriteLine("Percent for flip the Heads is {0}% ,Percent for flip the tails is {1}%", headpercent, tailpercent);
-                Console.ReadLine();
-            
+            else
+            {
+                Console.WriteLine("The number is Odd");
+            }
+            Console.ReadLine();
         }
     }
 }
+
+
