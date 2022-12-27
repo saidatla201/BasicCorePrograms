@@ -10,18 +10,30 @@ namespace logicprograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the dividend value :");
-            int numerator = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the divisor vale:");
-            int denominator = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Alphabet :");
+            string alphabet = Console.ReadLine();
 
-            int quotient = numerator / denominator;
-            int remainder = numerator % denominator;
+            string[] array1 = new string[]{ "a", "e","i","o","u","A","E","I","O","U"};
 
-            Console.WriteLine("The quotient is {0} and the remainder is {1}", quotient, remainder);
+            int n = array1.Length;
+            for (int i = 0; i < n; i++)
+            {
+                if (alphabet == array1[i])
+
+                {
+                    Console.WriteLine("The {0} is vowel", alphabet);
+                }
+                else
+                {
+                    Console.WriteLine("The {0} is constant", alphabet);
+                }
+            }
+            
             Console.ReadLine();
+    
         }
     }
 }
+
 
 
