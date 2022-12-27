@@ -10,29 +10,18 @@ namespace logicprograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter 1st number :");
-            int first= Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter  2nd number :");
-            int second = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter 3rd number");
-            int third = Convert.ToInt32(Console.ReadLine());
-            if(first>second)
+            Console.WriteLine("Power Of 2 calculator.");
+
+            double powerOf2 = 0;
+            Console.WriteLine("Enter power value : ");
+            int value = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= value; i++)
             {
-                if(first >third )
-                {
-                    Console.WriteLine("The first number is largest among three");
-                }
-                
+                powerOf2 = Math.Pow(2, i);
+                Console.WriteLine("2 ^ {0} : {1}", i, powerOf2);
             }
-            else if (second>third)
-            {
-                Console.WriteLine("The second number is largest among three");
-            }
-            else 
-            {
-                Console.WriteLine("The third number is largest among three");
-            }
-            Console.ReadLine();
+                Console.ReadLine();
         }
     }
 }
