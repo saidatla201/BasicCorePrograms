@@ -10,17 +10,22 @@ namespace logicprograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Power Of 2 calculator.");
-
-            double powerOf2 = 0;
-            Console.WriteLine("Enter power value : ");
-            int value = Convert.ToInt32(Console.ReadLine());
-
-            for (int i = 1; i <= value; i++)
+            Console.WriteLine("Enter the number");
+            int number = Convert.ToInt32(Console.ReadLine());
+            for (int i = 2; i <= number; i++)
             {
-                powerOf2 = Math.Pow(2, i);
-                Console.WriteLine("2 ^ {0} : {1}", i, powerOf2);
+                while (number % i == 0)
+                {
+                    Console.WriteLine("The factors are {0} :",i);
+                    number = number / i;
+                }
+
             }
+            if (number != 1)
+            {
+                Console.WriteLine( number);
+            }
+        
                 Console.ReadLine();
         }
     }
